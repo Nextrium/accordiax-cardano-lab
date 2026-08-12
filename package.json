@@ -11,7 +11,9 @@
     "wallets:generate": "tsx scripts/generate-test-wallets.ts",
     "wallets:show": "tsx scripts/show-test-wallet.ts",
     "asset:mint": "tsx scripts/mint-test-asset.ts",
-    "asset:transfer": "tsx experiments/transactions/native-asset-transfer.ts"
+    "asset:transfer": "tsx experiments/transactions/native-asset-transfer.ts",
+    "fee:sponsor": "tsx experiments/transactions/fee-sponsor.ts",
+    "wallet:fund-sponsor": "tsx experiments/transactions/fund-sponsor.ts"
   },
   "dependencies": {
     "@lucid-evolution/lucid": "0.6.1",

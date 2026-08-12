@@ -1,7 +1,10 @@
 import { config } from "dotenv";
 import { Blockfrost, Lucid } from "@lucid-evolution/lucid";
 
-config({ path: ".env.local" });
+const localEnvironment = config({ path: ".env.local" });
+if (localEnvironment.error) {
+  config({ path: ".env" });
+}
 
 const BLOCKFROST_PREPROD_URL =
   "https://cardano-preprod.blockfrost.io/api/v0";
@@ -20,6 +23,7 @@ async function main(): Promise<void> {
   const projectId = requireEnv("BLOCKFROST_PREPROD_PROJECT_ID");
   const senderSeed = requireEnv("TEST_SENDER_SEED");
   const recipientSeed = requireEnv("TEST_RECIPIENT_SEED");
+  const sponsorSeed = requireEnv("TEST_SPONSOR_SEED");
 
   const lucid = await Lucid(
     new Blockfrost(BLOCKFROST_PREPROD_URL, projectId),
@@ -34,9 +38,14 @@ async function main(): Promise<void> {
 
   const recipientAddress = await lucid.wallet().address();
 
+  lucid.selectWallet.fromSeed(sponsorSeed);
+
+  const sponsorAddress = await lucid.wallet().address();
+
   console.log("\n=== ACCORDIAX CARDANO PREPROD TEST WALLETS ===");
   console.log(`Sender:    ${senderAddress}`);
   console.log(`Recipient: ${recipientAddress}`);
+  console.log(`Sponsor:   ${sponsorAddress}`);
 }
 
 main().catch((error: unknown) => {
