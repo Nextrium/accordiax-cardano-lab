@@ -10,7 +10,8 @@
     "transfer": "tsx experiments/transactions/ada-transfer.ts",
     "wallets:generate": "tsx scripts/generate-test-wallets.ts",
     "wallets:show": "tsx scripts/show-test-wallet.ts",
-    "asset:mint": "tsx scripts/mint-test-asset.ts"
+    "asset:mint": "tsx scripts/mint-test-asset.ts",
+    "asset:transfer": "tsx experiments/transactions/native-asset-transfer.ts"
   },
   "dependencies": {
     "@lucid-evolution/lucid": "0.6.1",

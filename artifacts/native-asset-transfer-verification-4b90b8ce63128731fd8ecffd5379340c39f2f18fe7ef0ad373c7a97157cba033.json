@@ -1,0 +1,45 @@
+{
+  "experiment": "native-asset-transfer-verification",
+  "network": "Preprod",
+  "transactionHash": "4b90b8ce63128731fd8ecffd5379340c39f2f18fe7ef0ad373c7a97157cba033",
+  "status": "confirmed",
+  "recipientAddress": "addr_test1qqcq9pyyu2xqmqphz9ayqc4ekplstll6685rtawvk4evkannsgqn4mdh5whekhva8pzjl6gf47vk003vv4lejd3nc5hqg24g7f",
+  "expectedRecipientAddress": "addr_test1qqcq9pyyu2xqmqphz9ayqc4ekplstll6685rtawvk4evkannsgqn4mdh5whekhva8pzjl6gf47vk003vv4lejd3nc5hqg24g7f",
+  "asset": {
+    "policyId": "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b304",
+    "assetName": "NXTEST",
+    "assetUnit": "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354",
+    "expectedQuantity": "1000",
+    "receivedQuantity": "1000"
+  },
+  "outputs": [
+    {
+      "txHash": "4b90b8ce63128731fd8ecffd5379340c39f2f18fe7ef0ad373c7a97157cba033",
+      "outputIndex": 0,
+      "address": "addr_test1qqcq9pyyu2xqmqphz9ayqc4ekplstll6685rtawvk4evkannsgqn4mdh5whekhva8pzjl6gf47vk003vv4lejd3nc5hqg24g7f",
+      "assets": {
+        "lovelace": "2000000",
+        "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354": "1000"
+      },
+      "containsExpectedAsset": true
+    },
+    {
+      "txHash": "4b90b8ce63128731fd8ecffd5379340c39f2f18fe7ef0ad373c7a97157cba033",
+      "outputIndex": 1,
+      "address": "addr_test1qrw8vet8cjm5uwtxf6whyvxgm3554wsvq8p3q4htyn84ydnepcz9cswaznnf7m0szqlpyccettws4ssdzt0qqwgrc57s8lkyal",
+      "assets": {
+        "lovelace": "9995478945",
+        "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354": "999000"
+      },
+      "containsExpectedAsset": false
+    }
+  ],
+  "verification": {
+    "method": "Blockfrost provider.getTransactionStatus plus provider.getUtxosByOutRef for output indexes 0-9",
+    "confirmed": true,
+    "recipientMatched": true,
+    "assetUnitMatched": true,
+    "exactQuantityMatched": true
+  },
+  "verifiedAt": "2026-08-12T07:24:25.273Z"
+}
