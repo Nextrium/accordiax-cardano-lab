@@ -1,0 +1,26 @@
+node_modules/
+dist/
+coverage/
+
+.env
+.env.*
+!.env.example
+
+# Cardano signing material
+*.skey
+*.vkey
+*.xprv
+*.seed
+*.mnemonic
+*.wallet
+*.key
+
+# Local Cardano state
+.cardano/
+.tmp/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
