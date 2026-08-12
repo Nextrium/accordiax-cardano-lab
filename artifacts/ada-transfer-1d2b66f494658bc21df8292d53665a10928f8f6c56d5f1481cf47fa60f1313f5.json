@@ -1,0 +1,12 @@
+{
+  "network": "Preprod",
+  "senderAddress": "addr_test1qrw8vet8cjm5uwtxf6whyvxgm3554wsvq8p3q4htyn84ydnepcz9cswaznnf7m0szqlpyccettws4ssdzt0qqwgrc57s8lkyal",
+  "recipientAddress": "addr_test1qqcq9pyyu2xqmqphz9ayqc4ekplstll6685rtawvk4evkannsgqn4mdh5whekhva8pzjl6gf47vk003vv4lejd3nc5hqg24g7f",
+  "transferAmountLovelace": "2000000",
+  "transferAmountAda": 2,
+  "transactionHash": "1d2b66f494658bc21df8292d53665a10928f8f6c56d5f1481cf47fa60f1313f5",
+  "transactionSizeBytes": 188,
+  "feeLovelace": "168493",
+  "feeAda": 0.168493,
+  "createdAt": "2026-08-12T05:59:24.606Z"
+}
