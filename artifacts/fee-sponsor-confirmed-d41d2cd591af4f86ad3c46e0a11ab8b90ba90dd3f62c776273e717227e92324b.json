@@ -1,0 +1,117 @@
+{
+  "experiment": "fee-sponsor-confirmed-verification",
+  "network": "Preprod",
+  "transactionHash": "d41d2cd591af4f86ad3c46e0a11ab8b90ba90dd3f62c776273e717227e92324b",
+  "status": "confirmed",
+  "confirmation": {
+    "txHash": "d41d2cd591af4f86ad3c46e0a11ab8b90ba90dd3f62c776273e717227e92324b",
+    "blockHash": "0883d8e162815ef6efa8a64cf9e68244d27290032c5cb91faaf4c323582c13e1",
+    "blockHeight": 5046580,
+    "slot": 130840317
+  },
+  "addresses": {
+    "user": "addr_test1qrw8vet8cjm5uwtxf6whyvxgm3554wsvq8p3q4htyn84ydnepcz9cswaznnf7m0szqlpyccettws4ssdzt0qqwgrc57s8lkyal",
+    "sponsor": "addr_test1qrch3mydkdjt33avwq88cvue4h5v5e4wupqasfgy7505q27d55gy80twa3dk0rd3ha5jpdv3unu7yqx8pn9hvnx2hgus42yqld",
+    "recipient": "addr_test1qqcq9pyyu2xqmqphz9ayqc4ekplstll6685rtawvk4evkannsgqn4mdh5whekhva8pzjl6gf47vk003vv4lejd3nc5hqg24g7f"
+  },
+  "inputs": [
+    {
+      "txHash": "68f62bc82f83c0ee7df05c01eb18dba68c90216604ad44818304b5df4944b4ac",
+      "outputIndex": 0,
+      "address": "addr_test1qrch3mydkdjt33avwq88cvue4h5v5e4wupqasfgy7505q27d55gy80twa3dk0rd3ha5jpdv3unu7yqx8pn9hvnx2hgus42yqld",
+      "assets": {
+        "lovelace": "2000000000"
+      }
+    },
+    {
+      "txHash": "68f62bc82f83c0ee7df05c01eb18dba68c90216604ad44818304b5df4944b4ac",
+      "outputIndex": 1,
+      "address": "addr_test1qrw8vet8cjm5uwtxf6whyvxgm3554wsvq8p3q4htyn84ydnepcz9cswaznnf7m0szqlpyccettws4ssdzt0qqwgrc57s8lkyal",
+      "assets": {
+        "lovelace": "7995308648",
+        "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354": "999000"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "outputIndex": 0,
+      "address": "addr_test1qqcq9pyyu2xqmqphz9ayqc4ekplstll6685rtawvk4evkannsgqn4mdh5whekhva8pzjl6gf47vk003vv4lejd3nc5hqg24g7f",
+      "assets": {
+        "lovelace": "2000000",
+        "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354": "1000"
+      }
+    },
+    {
+      "outputIndex": 1,
+      "address": "addr_test1qrw8vet8cjm5uwtxf6whyvxgm3554wsvq8p3q4htyn84ydnepcz9cswaznnf7m0szqlpyccettws4ssdzt0qqwgrc57s8lkyal",
+      "assets": {
+        "lovelace": "7995308648",
+        "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354": "998000"
+      }
+    },
+    {
+      "outputIndex": 2,
+      "address": "addr_test1qrch3mydkdjt33avwq88cvue4h5v5e4wupqasfgy7505q27d55gy80twa3dk0rd3ha5jpdv3unu7yqx8pn9hvnx2hgus42yqld",
+      "assets": {
+        "lovelace": "1997700000"
+      }
+    }
+  ],
+  "feeLovelace": "300000",
+  "blockfrostTransactionSizeBytes": 583,
+  "cborSizeBytes": 584,
+  "transactionSizeBytes": 583,
+  "assetUnit": "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354",
+  "assetQuantities": {
+    "recipientNxtest": "1000",
+    "inputTotals": {
+      "lovelace": "9995308648",
+      "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354": "999000"
+    },
+    "outputTotals": {
+      "lovelace": "9995008648",
+      "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354": "999000"
+    }
+  },
+  "witnesses": {
+    "required": {
+      "userPaymentKeyHash": "dc766567c4b74e39664e9d7230c8dc694aba0c01c31056eb24cf5236",
+      "sponsorPaymentKeyHash": "f178ec8db364b8c7ac700e7c3399ade8ca66aee041d82504f51f402b"
+    },
+    "presentVerificationKeyHashes": [
+      "dc766567c4b74e39664e9d7230c8dc694aba0c01c31056eb24cf5236",
+      "f178ec8db364b8c7ac700e7c3399ade8ca66aee041d82504f51f402b"
+    ],
+    "count": 2,
+    "bothRequiredWitnessesPresent": true
+  },
+  "topologyComparison": {
+    "source": "fee-sponsor-pending.json dry-run topology; chain data is authoritative",
+    "expectedUserInputPresent": true,
+    "expectedSponsorInputPresent": true,
+    "recipientOutputMatched": true,
+    "userChangeMatched": true,
+    "sponsorChangeMatched": true
+  },
+  "balanceEquation": {
+    "equation": "inputs = outputs + fee (lovelace); inputs = outputs (native assets)",
+    "byUnit": {
+      "lovelace": {
+        "inputs": "9995308648",
+        "outputs": "9995008648",
+        "difference": "300000",
+        "conserved": true
+      },
+      "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354": {
+        "inputs": "999000",
+        "outputs": "999000",
+        "difference": "0",
+        "conserved": true
+      }
+    },
+    "balanced": true
+  },
+  "verificationMethod": "Read-only Blockfrost Preprod queries: provider.getTransactionStatus, /txs/{hash}, /txs/{hash}/utxos, and /txs/{hash}/cbor; CBOR decoded with @lucid-evolution/lucid CML.",
+  "verifiedAt": "2026-08-16T08:24:56.693Z"
+}
