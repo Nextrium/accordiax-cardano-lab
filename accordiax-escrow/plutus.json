@@ -1,0 +1,83 @@
+{
+  "preamble": {
+    "title": "nextrium/accordiax-escrow",
+    "description": "Aiken contracts for project 'nextrium/accordiax-escrow'",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.21+42babe5"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "escrow.escrow.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/escrow~1EscrowDatum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/escrow~1EscrowRedeemer"
+        }
+      },
+      "compiledCode": "59012601010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cc01c0092225980099b8748008c01cdd500144c8cc8a60022b30013001300a37540051980098059baa300d300b37540052300e300f300f300f300f300f300f300f300f001911919800800801912cc00400629422b30013371e6eb8c04400400e2946266004004602400280690102444b30013004300d375401313300137586004601c6ea801cdd718081808801c4cc004dd6180118071baa007375c60200068061164025300a375400d300d003488966002600800515980098071baa009801c5900f456600266e1d20020028acc004c038dd5004c00e2c807a2c806100c0c02cc030004dc3a400060106ea800a2c8030600e00260066ea801e29344d95900101",
+      "hash": "72f2d83689632d01f703bd612b9e6c85388f6862cfb5aaeeb28d72a1"
+    },
+    {
+      "title": "escrow.escrow.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "59012601010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cc01c0092225980099b8748008c01cdd500144c8cc8a60022b30013001300a37540051980098059baa300d300b37540052300e300f300f300f300f300f300f300f300f001911919800800801912cc00400629422b30013371e6eb8c04400400e2946266004004602400280690102444b30013004300d375401313300137586004601c6ea801cdd718081808801c4cc004dd6180118071baa007375c60200068061164025300a375400d300d003488966002600800515980098071baa009801c5900f456600266e1d20020028acc004c038dd5004c00e2c807a2c806100c0c02cc030004dc3a400060106ea800a2c8030600e00260066ea801e29344d95900101",
+      "hash": "72f2d83689632d01f703bd612b9e6c85388f6862cfb5aaeeb28d72a1"
+    }
+  ],
+  "definitions": {
+    "aiken/crypto/VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
+    },
+    "escrow/EscrowDatum": {
+      "title": "EscrowDatum",
+      "anyOf": [
+        {
+          "title": "EscrowDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "buyer",
+              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+            },
+            {
+              "title": "seller",
+              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+            }
+          ]
+        }
+      ]
+    },
+    "escrow/EscrowRedeemer": {
+      "title": "EscrowRedeemer",
+      "anyOf": [
+        {
+          "title": "Release",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Refund",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    }
+  }
+}
