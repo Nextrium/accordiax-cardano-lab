@@ -14,7 +14,9 @@
     "asset:transfer": "tsx experiments/transactions/native-asset-transfer.ts",
     "fee:sponsor": "tsx experiments/transactions/fee-sponsor.ts",
     "wallet:fund-sponsor": "tsx experiments/transactions/fund-sponsor.ts",
-    "escrow:inspect": "tsx scripts/escrow/inspect-validator.ts"
+    "escrow:inspect": "tsx scripts/escrow/inspect-validator.ts",
+    "escrow:fund": "tsx scripts/escrow/fund-escrow.ts",
+    "escrow:verify-funding": "tsx scripts/escrow/verify-funding.ts"
   },
   "dependencies": {
     "@lucid-evolution/lucid": "0.6.1",
