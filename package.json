@@ -16,7 +16,8 @@
     "wallet:fund-sponsor": "tsx experiments/transactions/fund-sponsor.ts",
     "escrow:inspect": "tsx scripts/escrow/inspect-validator.ts",
     "escrow:fund": "tsx scripts/escrow/fund-escrow.ts",
-    "escrow:verify-funding": "tsx scripts/escrow/verify-funding.ts"
+    "escrow:verify-funding": "tsx scripts/escrow/verify-funding.ts",
+    "escrow:release": "tsx scripts/escrow/release-escrow.ts"
   },
   "dependencies": {
     "@lucid-evolution/lucid": "0.6.1",
