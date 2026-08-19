@@ -1,0 +1,31 @@
+{
+  "name": "@nextrium/accordiax-cardano-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cardano settlement, escrow, wallet and fee-abstraction infrastructure for Accordiax by Nextrium Global Innovations Ltd.",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "network": "tsx experiments/network/query.ts",
+    "transfer": "tsx experiments/transactions/ada-transfer.ts",
+    "wallets:generate": "tsx scripts/generate-test-wallets.ts",
+    "wallets:show": "tsx scripts/show-test-wallet.ts",
+    "asset:mint": "tsx scripts/mint-test-asset.ts",
+    "asset:transfer": "tsx experiments/transactions/native-asset-transfer.ts",
+    "fee:sponsor": "tsx experiments/transactions/fee-sponsor.ts",
+    "wallet:fund-sponsor": "tsx experiments/transactions/fund-sponsor.ts",
+    "escrow:inspect": "tsx scripts/escrow/inspect-validator.ts",
+    "escrow:fund": "tsx scripts/escrow/fund-escrow.ts",
+    "escrow:verify-funding": "tsx scripts/escrow/verify-funding.ts",
+    "escrow:release": "tsx scripts/escrow/release-escrow.ts"
+  },
+  "dependencies": {
+    "@lucid-evolution/lucid": "0.6.1",
+    "dotenv": "17.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "26.2.0",
+    "tsx": "4.23.12",
+    "typescript": "7.0.2"
+  }
+}

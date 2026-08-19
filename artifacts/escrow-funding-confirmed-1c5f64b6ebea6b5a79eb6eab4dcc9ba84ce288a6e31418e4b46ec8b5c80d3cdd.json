@@ -1,0 +1,63 @@
+{
+  "experiment": "escrow-funding-confirmed-verification",
+  "network": "Preprod",
+  "transactionHash": "1c5f64b6ebea6b5a79eb6eab4dcc9ba84ce288a6e31418e4b46ec8b5c80d3cdd",
+  "status": "confirmed",
+  "confirmation": {
+    "txHash": "1c5f64b6ebea6b5a79eb6eab4dcc9ba84ce288a6e31418e4b46ec8b5c80d3cdd",
+    "blockHash": "39e0b07e4a677c9864e55294bda23cb1d91e67870c496961e6e4b8ba60e75d4a",
+    "blockHeight": 5068741,
+    "slot": 131335343
+  },
+  "escrow": {
+    "scriptAddress": "addr_test1wrcjrmuy9lxyzhjc5x7ynsyfs4k0nv0zq6uq888jf08xhvqra7rf6",
+    "outputIndex": 0,
+    "outputTxHash": "1c5f64b6ebea6b5a79eb6eab4dcc9ba84ce288a6e31418e4b46ec8b5c80d3cdd",
+    "lovelace": "3000000",
+    "assetUnit": "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354",
+    "assetQuantity": "1000"
+  },
+  "outputs": [
+    {
+      "txHash": "1c5f64b6ebea6b5a79eb6eab4dcc9ba84ce288a6e31418e4b46ec8b5c80d3cdd",
+      "outputIndex": 0,
+      "address": "addr_test1wrcjrmuy9lxyzhjc5x7ynsyfs4k0nv0zq6uq888jf08xhvqra7rf6",
+      "assets": {
+        "lovelace": "3000000",
+        "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354": "1000"
+      }
+    },
+    {
+      "txHash": "1c5f64b6ebea6b5a79eb6eab4dcc9ba84ce288a6e31418e4b46ec8b5c80d3cdd",
+      "outputIndex": 1,
+      "address": "addr_test1qrw8vet8cjm5uwtxf6whyvxgm3554wsvq8p3q4htyn84ydnepcz9cswaznnf7m0szqlpyccettws4ssdzt0qqwgrc57s8lkyal",
+      "assets": {
+        "lovelace": "7992132719",
+        "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354": "997000"
+      }
+    }
+  ],
+  "expected": {
+    "lovelace": "3000000",
+    "assetUnit": "a9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b3044e5854455354",
+    "assetQuantity": "1000"
+  },
+  "datum": {
+    "expectedCbor": "d8799f581cdc766567c4b74e39664e9d7230c8dc694aba0c01c31056eb24cf5236581c30028484e28c0d8037117a4062b9b07f05fffad1e835f5ccb572cb76581ca9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b304464e58544553541903e8ff",
+    "actualOnChainCbor": "d8799f581cdc766567c4b74e39664e9d7230c8dc694aba0c01c31056eb24cf5236581c30028484e28c0d8037117a4062b9b07f05fffad1e835f5ccb572cb76581ca9d7a35b696278de5788199bfc8c7debcc84a991f9c155576677b304464e58544553541903e8ff",
+    "directOnChainVerification": true,
+    "matched": true,
+    "source": "/txs/{hash}/cbor decoded with @lucid-evolution/lucid CML"
+  },
+  "verification": {
+    "method": "Blockfrost getTransactionStatus plus getUtxosByOutRef plus /txs/{hash}/cbor",
+    "confirmed": true,
+    "scriptAddressMatched": true,
+    "exactAdaMatched": true,
+    "exactNXTESTMatched": true,
+    "inlineDatumMatched": true,
+    "transactionSizeBytes": 361,
+    "feeLovelace": "175929"
+  },
+  "verifiedAt": "2026-08-18T02:34:16.309Z"
+}

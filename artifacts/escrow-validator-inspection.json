@@ -1,0 +1,19 @@
+{
+  "experiment": "escrow-validator-inspection",
+  "network": "Preprod",
+  "blueprint": "C:\\Users\\Admin\\Desktop\\accordiax-cardano-lab\\accordiax-escrow\\plutus.json",
+  "validatorTitle": "escrow.escrow.spend",
+  "plutusVersion": "v3",
+  "compiler": {
+    "name": "Aiken",
+    "version": "v1.1.21+42babe5"
+  },
+  "scriptType": "PlutusV3",
+  "compiledCodeSha256": "f0c7ab42959a6e3145c57fc78a1b9847ddf02c7845018155c00a8da106450853",
+  "blueprintScriptHash": "f121ef842fcc415e58a1bc49c089856cf9b1e206b8039cf24bce6bb0",
+  "derivedScriptHash": "f121ef842fcc415e58a1bc49c089856cf9b1e206b8039cf24bce6bb0",
+  "expectedScriptHash": "f121ef842fcc415e58a1bc49c089856cf9b1e206b8039cf24bce6bb0",
+  "scriptHashMatches": true,
+  "scriptAddress": "addr_test1wrcjrmuy9lxyzhjc5x7ynsyfs4k0nv0zq6uq888jf08xhvqra7rf6",
+  "createdAt": "2026-08-17T10:05:38.693Z"
+}
