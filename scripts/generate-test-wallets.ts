@@ -1,17 +1,29 @@
 import { generateSeedPhrase } from "@lucid-evolution/lucid";
-import { appendFile, access, readFile } from "node:fs/promises";
-import { constants } from "node:fs";
+import { open, type FileHandle } from "node:fs/promises";
 
 const ENV_FILE = ".env.local";
 
 async function main(): Promise<void> {
+  // Read and append through one file handle, so the file can't be swapped between the check and the write.
+  let file: FileHandle;
   try {
-    await access(ENV_FILE, constants.F_OK);
+    file = await open(ENV_FILE, "a+");
   } catch {
-    throw new Error(`${ENV_FILE} does not exist. Create it first with your Blockfrost configuration.`);
+    throw new Error(`${ENV_FILE} could not be opened.`);
+  }
+  try {
+    await run(file);
+  } finally {
+    await file.close();
+  }
+}
+
+async function run(file: FileHandle): Promise<void> {
+  if ((await file.stat()).size === 0) {
+    throw new Error(`${ENV_FILE} is empty or missing. Create it first with your Blockfrost configuration.`);
   }
 
-  const existing = await readFile(ENV_FILE, "utf8");
+  const existing = await file.readFile("utf8");
   const hasSender = /^TEST_SENDER_SEED=/m.test(existing);
   const hasRecipient = /^TEST_RECIPIENT_SEED=/m.test(existing);
   const hasSponsor = /^TEST_SPONSOR_SEED=/m.test(existing);
@@ -30,7 +42,7 @@ async function main(): Promise<void> {
     return;
   }
 
-  await appendFile(ENV_FILE, `\n# Local Cardano Preprod test wallets - NEVER COMMIT\n${additions.join("\n")}\n`, "utf8");
+  await file.appendFile(`\n# Local Cardano Preprod test wallets - NEVER COMMIT\n${additions.join("\n")}\n`, "utf8");
   console.log("Persistent Preprod test wallet credentials were updated.");
   console.log("Credentials were written only to .env.local.");
   console.log("Seed phrases were NOT printed.");

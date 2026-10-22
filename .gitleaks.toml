@@ -1,0 +1,11 @@
+# Uses gitleaks' default rules, plus one narrow allowance.
+[extend]
+useDefault = true
+
+# Cardano payment key hashes in on-chain evidence files are public values, not secrets.
+[[allowlists]]
+description = "Cardano payment key hashes in evidence artifacts"
+condition = "AND"
+paths = ['''^artifacts/[^/]+\.json$''']
+regexTarget = "line"
+regexes = ['''[Pp]aymentKeyHash"\s*:\s*"[0-9a-f]{56}"''']

@@ -1,0 +1,8 @@
+# Every change needs a review from the Accordiax code owners.
+*                    @Nextrium/accordiax-code-owners
+
+# Listed explicitly so they stay protected if the catch-all is ever narrowed.
+/.github/            @Nextrium/accordiax-code-owners
+/.gitleaks.toml      @Nextrium/accordiax-code-owners
+/accordiax-escrow/   @Nextrium/accordiax-code-owners
+/scripts/            @Nextrium/accordiax-code-owners
