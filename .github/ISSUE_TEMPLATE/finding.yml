@@ -1,0 +1,44 @@
+name: Finding
+description: Report a bug, a docs problem or a small suggestion.
+labels: [finding, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Security problem?** Don't file it here. Use private vulnerability reporting (see SECURITY.md).
+        Looking for something to work on? Tasks live in the contributors portal.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Bug
+        - Documentation
+        - Suggestion
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Go to …\n2. Click …"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: Include screenshots if useful. Remove any personal data first.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Node 22, Aiken v1.1.21, Windows 11
