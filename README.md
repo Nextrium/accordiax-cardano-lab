@@ -176,6 +176,10 @@ Successful Preprod execution does not constitute a security audit, production ap
 
 Production deployment requires additional security review, testing, operational controls and validation of all external integrations.
 
+## Contributing
+
+Tasks live in the [contributors portal](https://contribute.nextrium.org/). Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [handbook](docs/HANDBOOK.md) before opening a pull request. Report security problems privately as described in [SECURITY.md](SECURITY.md).
+
 ## License
 
 MIT License.

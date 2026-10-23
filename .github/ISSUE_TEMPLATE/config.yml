@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Pick up a task
+    url: https://contribute.nextrium.org/
+    about: Tasks for contributors live in the Nextrium contributors portal.
+  - name: Report a security vulnerability
+    url: https://github.com/Nextrium/accordiax-cardano-lab/security/advisories/new
+    about: Report privately. Never in a public issue.
